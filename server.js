@@ -51,6 +51,13 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/showcase", (req, res) => {
+  res.render("project.hbs", {
+    pageTitle: "Showcase!",
+    welcomeMessage: "To put all github projects!"
+  });
+});
+
 app.get("/bad", (req, res) => {
   res.send({
     errorMessage: "Unable to handle request!:("
